@@ -18,7 +18,7 @@ const Index = () => {
   return (
     <>
       {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
-      <div className={`min-h-screen bg-background transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <Hero />
         <About />
         <HowItWorks />
