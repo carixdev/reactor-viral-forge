@@ -57,6 +57,13 @@ All colors MUST be HSL.
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    
+    /* Enhanced Glassmorphism */
+    --glass-card: rgba(255, 255, 255, 0.03);
+    --glass-card-hover: rgba(255, 255, 255, 0.06);
+    --glass-card-border: rgba(255, 255, 255, 0.08);
+    --glass-intense: rgba(255, 255, 255, 0.12);
+    --glass-backdrop: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -67,5 +74,92 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Enhanced Glassmorphism Components */
+  .glass-card {
+    background: var(--glass-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-card-border);
+    box-shadow: var(--glass-shadow);
+    transition: var(--transition-smooth);
+  }
+  
+  .glass-card:hover {
+    background: var(--glass-card-hover);
+    border-color: var(--glass-border);
+  }
+  
+  .glass-intense {
+    background: var(--glass-intense);
+    backdrop-filter: blur(30px);
+    border: 1px solid var(--glass-border);
+  }
+  
+  .floating-card {
+    background: var(--glass-card);
+    backdrop-filter: blur(25px);
+    border: 1px solid var(--glass-card-border);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .floating-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Advanced Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out;
+  }
+  
+  .animate-card-appear {
+    animation: card-appear 1s ease-out;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px rgba(0, 229, 255, 0.6), 0 0 60px rgba(255, 75, 216, 0.3);
+    }
+  }
+  
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes card-appear {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 }

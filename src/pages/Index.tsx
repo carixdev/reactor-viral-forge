@@ -7,6 +7,7 @@ import Features from '@/components/Features';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import FloatingElements from '@/components/FloatingElements';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,6 +20,7 @@ const Index = () => {
     <>
       {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
       <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+        <FloatingElements />
         <Hero />
         <About />
         <HowItWorks />

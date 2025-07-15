@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -47,8 +48,8 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold font-orbitron mb-4 text-accent">Legal</h4>
             <ul className="space-y-2 font-inter">
-              <li><a href="/terms" className="text-muted-foreground hover:text-accent transition-colors">Terms of Service</a></li>
-              <li><a href="/privacy" className="text-muted-foreground hover:text-accent transition-colors">Privacy Policy</a></li>
+              <li><Link to="/terms" className="text-muted-foreground hover:text-accent transition-colors">Terms of Service</Link></li>
+              <li><Link to="/privacy" className="text-muted-foreground hover:text-accent transition-colors">Privacy Policy</Link></li>
               <li><a href="/cookies" className="text-muted-foreground hover:text-accent transition-colors">Cookie Policy</a></li>
               <li><a href="/dmca" className="text-muted-foreground hover:text-accent transition-colors">DMCA</a></li>
             </ul>
@@ -62,12 +63,12 @@ const Footer = () => {
               © 2024 AI Reactor. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors font-inter">
+              <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors font-inter">
                 Terms of Service
-              </a>
-              <a href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors font-inter">
+              </Link>
+              <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors font-inter">
                 Privacy Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
