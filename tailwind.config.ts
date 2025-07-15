@@ -51,6 +51,15 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				glass: {
+					container: 'var(--glass-container)',
+					card: 'var(--glass-card)',
+					sidebar: 'var(--glass-sidebar)',
+					button: 'var(--glass-button)',
+					border: 'var(--glass-border)',
+					intense: 'var(--glass-intense)',
+					backdrop: 'var(--glass-backdrop)'
 				}
 			},
 			backgroundImage: {

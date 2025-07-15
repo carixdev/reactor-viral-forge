@@ -1,95 +1,85 @@
-import { Card } from "@/components/ui/card";
 import { Zap, Target, Rocket } from "lucide-react";
 import ScrollAnimation from "./ScrollAnimations";
 
 const About = () => {
   return (
     <section id="about" className="py-24 px-6 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0, 229, 255, 0.3) 1px, transparent 0)',
-          backgroundSize: '60px 60px'
-        }}></div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         <ScrollAnimation animation="fadeInUp">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold font-orbitron mb-6">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                ABOUT AI REACTOR
+            <h2 className="text-h1 font-bold text-white mb-6">
+              Why Choose{' '}
+              <span className="text-primary">
+                AI Reactor
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-inter">
-              The world's first fully automated content creation platform that turns AI breakthroughs 
-              into viral short-form videos across all major social platforms.
+            <p className="text-body text-white/80 max-w-3xl mx-auto leading-relaxed">
+              We're not just another AI tool. We're your complete content automation solution, 
+              designed to turn your ideas into viral short-form videos effortlessly.
             </p>
           </div>
         </ScrollAnimation>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <ScrollAnimation animation="fadeInUp" delay={200}>
-            <Card className="p-8 bg-card/30 backdrop-blur-xl border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary h-full">
+            <div className="glass-card text-center">
               <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow-primary">
-                  <Zap className="w-8 h-8 text-background" />
+                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto">
+                  <Zap className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold font-orbitron mb-4 text-primary">
+              <h3 className="text-h3 font-bold text-white mb-4">
                 AI-Powered Creation
               </h3>
-              <p className="text-muted-foreground font-inter">
+              <p className="text-body text-white/80">
                 Our advanced AI models analyze trending topics, generate engaging scripts, 
                 and create compelling visuals automatically.
               </p>
-            </Card>
+            </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fadeInUp" delay={400}>
-            <Card className="p-8 bg-card/30 backdrop-blur-xl border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-glow-accent h-full">
+            <div className="glass-card text-center">
               <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center shadow-glow-accent">
-                  <Target className="w-8 h-8 text-background" />
+                <div className="w-16 h-16 bg-accent rounded-lg flex items-center justify-center mx-auto">
+                  <Target className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold font-orbitron mb-4 text-accent">
+              <h3 className="text-h3 font-bold text-white mb-4">
                 Multi-Platform Reach
               </h3>
-              <p className="text-muted-foreground font-inter">
+              <p className="text-body text-white/80">
                 Automatically optimize and distribute content across TikTok, YouTube Shorts, 
                 Instagram Reels, X, and LinkedIn.
               </p>
-            </Card>
+            </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fadeInUp" delay={600}>
-            <Card className="p-8 bg-card/30 backdrop-blur-xl border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow-primary h-full">
+            <div className="glass-card text-center">
               <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow-primary">
-                  <Rocket className="w-8 h-8 text-background" />
+                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto">
+                  <Rocket className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold font-orbitron mb-4 text-primary">
+              <h3 className="text-h3 font-bold text-white mb-4">
                 Viral Optimization
               </h3>
-              <p className="text-muted-foreground font-inter">
+              <p className="text-body text-white/80">
                 Machine learning algorithms continuously optimize content for maximum 
                 engagement and viral potential.
               </p>
-            </Card>
+            </div>
           </ScrollAnimation>
         </div>
 
         <ScrollAnimation animation="scaleIn" delay={800}>
           <div className="text-center">
-            <div className="inline-block p-8 bg-card/20 backdrop-blur-xl rounded-3xl border border-primary/30">
-              <h3 className="text-3xl font-bold font-orbitron mb-4">
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  The Future of Content is Here
-                </span>
+            <div className="glass-card-featured p-8 inline-block">
+              <h3 className="text-h2 font-bold text-white mb-4">
+                The Future of Content is Here
               </h3>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter">
+              <p className="text-body text-white/80 max-w-2xl mx-auto">
                 Join thousands of creators who have revolutionized their content strategy 
                 with AI Reactor's cutting-edge automation technology.
               </p>

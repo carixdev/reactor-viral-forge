@@ -10,10 +10,14 @@ import Footer from '@/components/Footer';
 import FloatingElements from '@/components/FloatingElements';
 
 const Index = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    // Only show loading on initial app startup
+    return !sessionStorage.getItem('app-loaded');
+  });
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
+    sessionStorage.setItem('app-loaded', 'true');
   };
 
   return (
